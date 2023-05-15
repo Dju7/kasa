@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './style/main.scss';
 import Home from './pages/Home/';
 import Logements from './pages/Logements/'
@@ -9,18 +9,21 @@ import Error from './components/Error/'
 import Header from './components/Header/'
 import Footer from './components/Footer/'
 
+const Router = createBrowserRouter ([
+  { path: '/', element: <Home /> },
+  { path: '/logements', element: <Logements /> },
+  { path: '/apropos', element: <Apropos /> },
+  { path: '*', element: <Error /> }
+]);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/logements" element={<Logements />} />
-        <Route path="/apropos" element={<Apropos />} />
-        <Route path="*" element={<Error />} /> 
-      </Routes>
+    <RouterProvider router={Router}>
+      <div className='content-wrapper'>
+        <Header />
+      </div>
       <Footer />
-    </Router>
-  </React.StrictMode>,
+    </RouterProvider>
+  </React.StrictMode>
 );

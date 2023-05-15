@@ -1,12 +1,12 @@
+import Banner from '../../components/Banner/'
 
-function App() {
+function Home() {
   return (
     <div className="App">
-      <header className="App-header">
-        <h1>HOME</h1>
-      </header>
+      <Banner />
+      <h1>HOME</h1> 
     </div>
   );
 }
 
-export default App;
+export default Home;
