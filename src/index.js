@@ -7,6 +7,9 @@ import Logements from './pages/Logements/'
 import Apropos from './pages/Apropos/'
 import Error from './components/Error/'
 import App from './App'
+import {getAllLodgings} from './api/'
+
+console.log(getAllLodgings());
 
 const Router = createBrowserRouter ([
   { path: '/', element: <App />,
