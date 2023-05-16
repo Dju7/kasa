@@ -1,16 +1,20 @@
 .banner {
     margin: 1rem .5rem;
     position: relative;
-    background-color: blue;
-    height: 7rem;
-    
+    border-radius: 20px;
+    background-image: url(../../assets/IMG.png);
+    height: 123px;
+    background-position: center;
+    background-size: cover;
+
     &__text {
-        margin: auto;
+        position: absolute;
+        top: 1rem;
         color: white;
-        padding-top: .4rem;
-        width: 17rem;
-        font-size: 1.4rem;
-        font-weight: 300;
+        left: 2rem;
+        width: 20rem;
+        font-size: 1.5rem;
+        font-weight: 500;
 
     }
 
