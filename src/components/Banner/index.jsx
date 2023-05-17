@@ -1,10 +1,10 @@
-import Styles from './banner.module.scss';
+import styles from './banner.module.scss';
 
 function Banner() {
     return (
-    <div className={Styles.banner}>
-       <div className={Styles.banner__text}><p >Chez vous, partout et ailleurs</p></div>
-    </div>
+    <section className={styles.banner}>
+       <div className={styles.banner__text}><p>Chez vous, partout et ailleurs</p></div>
+    </section>
     );
 }
 

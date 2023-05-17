@@ -1,9 +1,9 @@
 import Lodgings from '../datas/logements.json';
 
-export const getAllLodgings = async () => {
+export const getAllLodgings =  () => {
   return Lodgings;
 };
 
-export const getLodgingsById = async (id) => {
+export const getLodgingsById =  (id) => {
   return Lodgings.find((lodging) => lodging.id === id);
 };

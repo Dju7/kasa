@@ -1,11 +1,12 @@
 .banner {
-    margin: 1rem .5rem;
+    margin: 2rem .5rem;
     position: relative;
     border-radius: 20px;
-    background-image: url(../../assets/IMG.png);
+    background-image:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../../assets/IMG.png);
     height: 123px;
     background-position: center;
     background-size: cover;
+    
 
     &__text {
         position: absolute;
@@ -15,7 +16,6 @@
         width: 20rem;
         font-size: 1.5rem;
         font-weight: 500;
-
     }
 
 }

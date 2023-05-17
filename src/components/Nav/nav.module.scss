@@ -9,12 +9,11 @@
         text-decoration: none;
         color: var(--primary-color);
         padding-left: 0.5rem;
-        &:hover {
-            text-decoration-line: underline;
-        }
         &.active {
             text-decoration-line: underline;
         }
-
+        &:hover {
+            text-decoration-line: underline;
+        }
     }
 }
