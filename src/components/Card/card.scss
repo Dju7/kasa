@@ -11,6 +11,11 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        transition: .3s ease-in-out;
+        &:hover {
+           filter: brightness(110%);
+           transform: scale(1.1);
+        }
     }
     &__title {
         z-index: 10;
@@ -18,7 +23,9 @@
         bottom: .2rem;
         left: .2rem;
         &__text {
+            margin-left: 1rem;
             font-size: 1rem;
+            font-weight: 500;
             color: white;
         }
     }

@@ -1,11 +1,12 @@
 .nav {
     position: absolute;
-    right: 1rem;
-    top: 2.5rem;
+    right: 1.2rem;
+    top: 3.5rem;
     display: flex;
     
     a {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
+        margin-left: 4rem;
         text-decoration: none;
         color: var(--primary-color);
         padding-left: 0.5rem;
@@ -14,6 +15,9 @@
         }
         &:hover {
             text-decoration-line: underline;
+        }
+        @media only screen and (max-width: 685px) {
+            margin-left: 0.8rem;
         }
     }
 }

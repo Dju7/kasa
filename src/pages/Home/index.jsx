@@ -2,6 +2,7 @@ import Banner from '../../components/Banner/';
 import {getAllLodgings} from '../../api/';
 import styles from './home.module.scss'
 import Card from '../../components/Card'
+import {Link} from 'react-router-dom'
 
 function Home() {
   const lodgings = getAllLodgings();
@@ -11,7 +12,9 @@ function Home() {
       <section className={styles.gallery}>
         {lodgings.map((lodging) => (
           <div className='display' key={lodging.id}>
-          <Card cover={lodging.cover} title={lodging.title} />
+            < Link to={`/logements/${lodging.id}`}>
+              <Card cover={lodging.cover} title={lodging.title} />
+             </Link>
           </div>
         ))}
       </section>

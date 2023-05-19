@@ -8,12 +8,20 @@
         font-size: 8rem;
         font-weight: 700;
         margin-bottom: 0.3rem;
+        @media only screen and (min-width: 685px) {
+            font-size: 15rem;   
+            align-items: inherit;
+        }
     }
     &__text {
-        font-size: 1.3rem;
+       font-size: 1.3rem;
        text-align: center;
        margin-top: 0;
        margin-bottom: 8rem;
+       @media only screen and (min-width: 685px) {
+        font-size: 2.2rem;  
+        align-items: inherit; 
+    }
     }
     &__link {
         text-decoration: none;
@@ -21,6 +29,9 @@
         margin-bottom: 6rem;
         &:hover{
             text-decoration-line: underline ;
+        }
+        @media only screen and (min-width: 685px) {
+            align-items: inherit; 
         }
     }
     

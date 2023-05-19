@@ -1,21 +1,28 @@
 .banner {
-    margin: 2rem .5rem;
-    position: relative;
+    margin: 2rem .8rem;
+    display: flex;
+    align-items: center;
     border-radius: 20px;
     background-image:linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.2)), url(../../assets/IMG.png);
     height: 123px;
     background-position: center;
     background-size: cover;
-    
+    @media only screen and (min-width: 685px) {
+        height: 223px;
+        justify-content: center;
+    }
 
     &__text {
-        position: absolute;
-        top: 1rem;
         color: white;
-        left: 2rem;
+        margin-left: 1rem;
         width: 20rem;
         font-size: 1.5rem;
         font-weight: 500;
+        @media only screen and (min-width: 685px) {
+            margin-left: 0;
+            font-size: 2.5rem;
+            min-width: 40rem;
+        }
     }
 
 }
