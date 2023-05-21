@@ -3,6 +3,10 @@
     flex-direction: column;
     align-items: center;
     color: var(--primary-color);
+    @media only screen and (min-width: 685px) {
+        margin-bottom: 18rem;
+        
+    }
 
     &__number {
         font-size: 8rem;
@@ -10,7 +14,7 @@
         margin-bottom: 0.3rem;
         @media only screen and (min-width: 685px) {
             font-size: 15rem;   
-            align-items: inherit;
+           
         }
     }
     &__text {
@@ -20,7 +24,7 @@
        margin-bottom: 8rem;
        @media only screen and (min-width: 685px) {
         font-size: 2.2rem;  
-        align-items: inherit; 
+        
     }
     }
     &__link {
@@ -29,9 +33,6 @@
         margin-bottom: 6rem;
         &:hover{
             text-decoration-line: underline ;
-        }
-        @media only screen and (min-width: 685px) {
-            align-items: inherit; 
         }
     }
     

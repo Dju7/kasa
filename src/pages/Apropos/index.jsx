@@ -10,10 +10,9 @@ function Apropos() {
       <section className={styles.collapse_box}>
         {aproposTxt.map(data => {
           return (
-            <Collapse key={data.id} />
+            <Collapse key={data.id} title={data.title} content={data.content}/>
           )}
           )}
-          <Collapse/>
       </section>     
     </main>
   );
