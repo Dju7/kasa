@@ -3,10 +3,6 @@
     flex-direction: column;
     align-items: center;
     color: var(--primary-color);
-    @media only screen and (min-width: 685px) {
-        margin-bottom: 18rem;
-        
-    }
 
     &__number {
         font-size: 8rem;
@@ -14,6 +10,7 @@
         margin-bottom: 0.3rem;
         @media only screen and (min-width: 685px) {
             font-size: 15rem;   
+            margin-top: 4rem;
            
         }
     }
