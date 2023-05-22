@@ -1,11 +1,17 @@
 import Banner from '../../components/Banner/';
-import {getAllLodgings} from '../../api/';
+// import {getAllLodgings} from '../../api/';
 import styles from './home.module.scss'
 import Card from '../../components/Card'
-import {Link} from 'react-router-dom'
+import {Link, useLoaderData} from 'react-router-dom'
+import Lodgings from '../../datas/logements.json';
+
+export const loader =  async () => {
+  return Lodgings;
+};
+
 
 function Home() {
-  const lodgings = getAllLodgings();
+  const lodgings = useLoaderData();
   return (
     <main >
       <Banner />

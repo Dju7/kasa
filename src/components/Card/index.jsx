@@ -1,12 +1,12 @@
-import './card.scss';
+import styles from './card.module.scss';
 
 function Card ({cover, title}) {
     return (
         
-        <article className='card'>
-            <img src= {cover} alt="interieur piole" className='card__img' />
-            <div className='card__title'>
-                <p className='card__title__text'>{title}</p>
+        <article className={styles.card}>
+            <img src= {cover} alt="interieur piole" className={styles.card__img} />
+            <div className={styles.card__title}>
+                <p className={styles.card__title__text}>{title}</p>
             </div>
         </article>
        

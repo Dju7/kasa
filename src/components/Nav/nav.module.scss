@@ -1,7 +1,7 @@
 .nav {
     position: absolute;
     right: 1.2rem;
-    top: 3.5rem;
+    top: 3.7rem;
     display: flex;
     
     a {
@@ -18,6 +18,7 @@
         }
         @media only screen and (max-width: 685px) {
             margin-left: 0.8rem;
+            font-size: 1.2rem;
         }
     }
 }

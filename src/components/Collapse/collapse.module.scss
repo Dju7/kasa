@@ -1,14 +1,11 @@
-@import '../../style/Utils/keyframes.scss';
-
 .collapse-el {
     display: flex;
     flex-direction: column;
-    position:absolute;
+    
 }
 
 .collapse {
-    position: relative;
-    z-index: 10;
+   
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -31,31 +28,28 @@
         margin: 14px;
         width: 25px;
         height: 15px;
-        transition: .3s ease-in-out;
+        transition: .2s ease-in-out;
         transform: rotate(180deg);
     }   
 }
 
 .collapse__content {
-    visibility: hidden;
-    opacity: 0;
-    height: 0;
-    
+    display: grid;
+    grid-template-rows: 0fr;
+    background-color: #f1f1f1;  
+    padding-left: 10px;      
+    overflow: hidden;
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+    color: var(--primary-color);
+    transition: grid-template .2s ease-in-out;
+
+    & > div {
+        overflow: hidden;
+    }
     
     &__expanded {
-        z-index: -1;
-        max-width: 1022px;
-        margin-top: -5px;
-        background-color: #f1f1f1;        
-        padding: 10px;
-        font-size: 1.2rem;
-        line-height: 1.7rem;
-        color: var(--primary-color);
-        visibility: visible;
-        opacity: 1;
-        height: auto;
-        animation: collapse .2s ease-in;
-
+        grid-template-rows: 1fr;
     }
 }
 

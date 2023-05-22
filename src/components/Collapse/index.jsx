@@ -2,7 +2,7 @@ import styles from './collapse.module.scss'
 import arrow from '../../assets/arrow.png'
 import { useState } from 'react';
 
-function Collapse ({title, content}) {
+function Collapse ({title, children}) {
     const [isOpen, setIsOpen] = useState(false);
     
 return (
@@ -12,7 +12,11 @@ return (
         <img src={arrow} className={isOpen ? styles.collapse__arrow : styles.collapse__arrowup} alt='fléche directionnelle' />
     </div>
     <div className={`${styles.collapse__content} ${isOpen ? styles.collapse__content__expanded : ''}`}>
-    <p>{content}</p> 
+      <div>
+        {children}  
+      </div>
+
+        
     </div>
   </div>
 )
