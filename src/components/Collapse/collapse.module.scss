@@ -12,17 +12,30 @@
     height: 47px;
     border-radius: 5px;
     background-color: var(--primary-color);
+    @media only screen and (max-width: 685px) {
+        height: 30px;
+    }
     &__title{
         color: white;
         margin: 12px;
         font-size: 1.2rem;  
         font-weight: 500;
+        @media only screen and (max-width: 685px) {
+           font-size: 0.9rem;
+           margin: 7px;
+        }
     }
     &__arrow {
         margin: 14px;
         width: 25px;
         height: 15px;
         transition: .3s ease-in-out;
+        @media only screen and (max-width: 685px) {
+            width: 16px;
+            height: 10px;
+            margin: 7px;
+         }
+     
     }
     &__arrowup {
         margin: 14px;
@@ -30,6 +43,11 @@
         height: 15px;
         transition: .2s ease-in-out;
         transform: rotate(180deg);
+        @media only screen and (max-width: 685px) {
+            width: 16px;
+            height: 10px;
+            margin: 10px;
+         }
     }   
 }
 
@@ -43,6 +61,9 @@
     line-height: 1.7rem;
     color: var(--primary-color);
     transition: grid-template .2s ease-in-out;
+    @media only screen and (max-width: 685px) {
+        font-size: 1rem;
+     }
 
     & > div {
         overflow: hidden;

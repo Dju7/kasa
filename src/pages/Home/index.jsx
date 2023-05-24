@@ -11,7 +11,7 @@ export const loader =  async () => {
 
 
 function Home() {
-  const lodgings = useLoaderData();
+const lodgings = useLoaderData();
   return (
     <main >
       <Banner />
