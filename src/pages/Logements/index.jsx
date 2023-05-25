@@ -4,6 +4,8 @@ import Caroussel from '../../components/Caroussel';
 import styles from './logement.module.scss'
 import Tag from '../../components/Tag'
 import Collapse from "../../components/Collapse";
+import Host from "../../components/Host";
+import Star from "../../components/Star";
 
 
 export const loader = async ({params}) => {
@@ -35,10 +37,10 @@ function Logements() {
         </div>
         <div className={styles.badge}>
           <div className={styles.badge__star}>
-          star
+          <Star rating={lodging.rating} />
           </div>
           <div className={styles.badge__host}>
-           host
+           <Host name={lodging.host.name} picture={lodging.host.picture} />
           </div>
         </div>
       </section>

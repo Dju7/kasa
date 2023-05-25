@@ -1,0 +1,18 @@
+.starcontainer {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+    height: 20px;
+    @media only screen and (min-width: 685px) {
+        width: 160px;
+        height: 30px;
+     }
+    &__star {
+        height: 13px;
+        width: 13.41px;
+        @media only screen and (min-width: 685px) {
+            width: 24.75px;
+            height: 24px;
+         }
+    }
+}

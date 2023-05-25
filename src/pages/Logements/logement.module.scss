@@ -42,12 +42,10 @@ main {
         align-items: end;
      }
     
-    &__star {
-        font-size: 2rem;
+    &__star { 
+        margin-top: 1rem; 
     }
-    &__host {
-        font-size: 3rem;
-    }
+   
 }
 
 .features {

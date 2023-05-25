@@ -6,7 +6,9 @@
     & > p {
         color: white;
         text-align: center;
-        margin-top: .3rem;
+        margin-top: .4rem;
         font-size: 0.7rem;
+        white-space: nowrap;
+        text-overflow: ellipsis;
     }
 }
