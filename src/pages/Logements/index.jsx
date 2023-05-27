@@ -58,7 +58,7 @@ function Logements() {
       </section>
       <div className={styles.features}>
         <div className={styles.features__description}>
-          <Collapse title="description">
+          <Collapse title="Description">
             <p>{lodging.description}</p>
           </Collapse>
         </div>
