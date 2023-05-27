@@ -1,11 +1,11 @@
-import styles from './tag.module.scss'
+import styles from "./tag.module.scss";
 
-function Tag ({tag}) {
-    return (
+function Tag({ tag }) {
+  return (
     <div className={styles.container}>
-        <p>{tag}</p>
+      <p>{tag}</p>
     </div>
-    )
+  );
 }
 
-export default Tag
+export default Tag;

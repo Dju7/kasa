@@ -1,17 +1,17 @@
 import { Outlet } from "react-router-dom";
 import Header from "./components/Header";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 function App() {
-    return(
+  return (
     <>
-    <div className="content-wrapper">
-        <Header />  
+      <div className="content-wrapper">
+        <Header />
         <Outlet />
-    </div>
-    <Footer />
+      </div>
+      <Footer />
     </>
-    )
+  );
 }
 
-export default App
+export default App;

@@ -1,16 +1,42 @@
-import styles from './caroussel.module.scss'
-import left from '../../assets/left.png'
-import right from '../../assets/right.png'
+import styles from "./caroussel.module.scss";
+import left from "../../assets/left.png";
+import right from "../../assets/right.png";
+import { useState } from "react";
 
-function Caroussel ({cover}) {
-return (
-    <div className={styles.items1}>
-        <img src={cover} alt='interieur appartement' className={styles.items1__image} />
-        <img src={left} alt="flèche directionelle" className={styles.items1__arrow1} />
-        <img src={right} alt="flèche directionelle" className={styles.items1__arrow2} />
+function Caroussel({ pictures }) {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const previouSlide = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide === 0 ? pictures.length - 1 : prevSlide - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setActiveSlide((prevSlide) =>
+      prevSlide === pictures.length - 1 ? 0 : prevSlide + 1
+    );
+  };
+  return (
+    <div className={styles.caroussel}>
+      <img
+        src={left}
+        alt="flèche directionelle"
+        className={styles.caroussel__arrow1}
+        onClick={previouSlide}
+      />
+      <img
+        src={pictures[activeSlide]}
+        className={styles.caroussel__image}
+        alt="décoration intérieure"
+      />
+      <img
+        src={right}
+        alt="flèche directionelle"
+        className={styles.caroussel__arrow2}
+        onClick={nextSlide}
+      />
     </div>
-) 
-
+  );
 }
 
-export default Caroussel
+export default Caroussel;

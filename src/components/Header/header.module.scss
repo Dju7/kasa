@@ -7,9 +7,14 @@
     
 
     &__logo {
-        margin-top: 3rem;
+        margin-top: 2.5rem;
         margin-left: 0.8rem;
-        width: 150px;   
+        width: 150px; 
+        @media only screen and (max-width: 685px) {
+            margin-top: 1.2rem;
+            width: 120px;
+        }
+        
     }
 
 }
