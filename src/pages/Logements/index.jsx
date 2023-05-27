@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import lodgings from "../../datas/logements.json";
 import Caroussel from "../../components/Caroussel";
 import styles from "./logement.module.scss";
@@ -15,6 +15,7 @@ export const loader = async ({ params }) => {
 
 function Logements() {
   const lodging = useLoaderData();
+
   return (
     <main>
       <section className={styles.caroussel}>
