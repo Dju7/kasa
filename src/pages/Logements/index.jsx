@@ -1,4 +1,4 @@
-import { useLoaderData, useNavigate} from "react-router-dom";
+import { useLoaderData} from "react-router-dom";
 import lodgings from "../../datas/logements.json";
 import Caroussel from "../../components/Caroussel";
 import styles from "./logement.module.scss";
@@ -6,28 +6,19 @@ import Tag from "../../components/Tag";
 import Collapse from "../../components/Collapse";
 import Host from "../../components/Host";
 import Star from "../../components/Star";
-import { useEffect } from "react";
+
 
 export const loader = async ({ params }) => {
   const { id } = params;
   const lodging = lodgings.find((lodging) => lodging.id === id);
-  return lodging || null;
+  if (!lodging) {
+    throw new Error(Error.message);
+  }
+  return lodging
 };
 
 function Logements() {
   const lodging = useLoaderData();
-  const navigate = useNavigate();
-  
-  useEffect(() => {
-    if (!lodging) {
-      navigate("*");
-    }
-  }, [lodging, navigate]);
-  if (!lodging) {
-    return null;
-  }
-
-
   return (
     <main>
       <section className={styles.caroussel}>

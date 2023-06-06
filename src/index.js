@@ -14,9 +14,9 @@ const Router = createBrowserRouter([
     element: <App />,
     children: [
       { path: "/", element: <Home />, loader: homeloader },
-      { path: "/logements/:id", element: <Logements />, loader: lodgingloader },
+      { path: "/logements/:id", element: <Logements />, loader: lodgingloader, errorElement: <Error errorMessage="Ce logement n'existe pas" />},
       { path: "/apropos", element: <Apropos /> },
-      { path: "*", element: <Error />, loader: lodgingloader},
+      { path: "*", errorElement: <Error />, loader: lodgingloader},
     ],
   },
 ]);
