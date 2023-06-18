@@ -2,11 +2,7 @@ import Banner from "../../components/Banner/";
 import styles from "./home.module.scss";
 import Card from "../../components/Card";
 import { Link, useLoaderData } from "react-router-dom";
-import Lodgings from "../../datas/logements.json";
 
-export const loader = async () => {
-  return Lodgings;
-};
 
 function Home() {
   const lodgings = useLoaderData();

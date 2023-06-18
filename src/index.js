@@ -2,8 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./style/main.scss";
-import Home, { loader as homeloader } from "./pages/Home/";
-import Logements, { loader as lodgingloader } from "./pages/Logements/";
+import Home from "./pages/Home/";
+import Logements from "./pages/Logements/";
+import {loader as homeloader} from "./api/loadData"
+import {loaderId as lodgingloader} from "./api/loadData"
 import Apropos from "./pages/Apropos/";
 import Error from "./components/Error/";
 import App from "./App";

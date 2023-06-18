@@ -18,6 +18,7 @@ function Caroussel({ pictures }) {
   };
 
   const showArrows = pictures.length > 1;
+  const paginationText = `${activeSlide + 1}/${pictures.length}`;
   
   return (
     <div className={styles.caroussel}>
@@ -42,6 +43,7 @@ function Caroussel({ pictures }) {
         onClick={nextSlide}
       />
       )}
+      <div className={styles.caroussel__pagination}>{paginationText}</div>
     </div>
   );
 }

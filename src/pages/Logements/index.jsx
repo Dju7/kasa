@@ -1,21 +1,10 @@
 import { useLoaderData} from "react-router-dom";
-import lodgings from "../../datas/logements.json";
 import Caroussel from "../../components/Caroussel";
 import styles from "./logement.module.scss";
 import Tag from "../../components/Tag";
 import Collapse from "../../components/Collapse";
 import Host from "../../components/Host";
 import Star from "../../components/Star";
-
-
-export const loader = async ({ params }) => {
-  const { id } = params;
-  const lodging = lodgings.find((lodging) => lodging.id === id);
-  if (!lodging) {
-    throw new Error(Error.message);
-  }
-  return lodging
-};
 
 function Logements() {
   const lodging = useLoaderData();
